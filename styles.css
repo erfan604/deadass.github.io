@@ -79,7 +79,16 @@ main {
 section h2, section p {
     font-size: 3em;
     margin-bottom: 20px;
-    color: #800080; /* Purple color */
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 14%, rgba(208,222,33,1) 28%, rgba(79,220,74,1) 42%, rgba(63,218,216,1) 57%, rgba(47,201,226,1) 71%, rgba(28,127,238,1) 85%, rgba(95,21,242,1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: rainbow 5s infinite;
+}
+
+@keyframes rainbow {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
 }
 
 .buy-button {
@@ -111,33 +120,33 @@ section h2, section p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Ensure images are spread around the text */
+/* Adjust image positions to ensure they're all visible */
 .random-img:nth-child(1) {
     top: 5%;
-    left: 5%;
+    left: 10%;
 }
 
 .random-img:nth-child(2) {
     top: 5%;
-    right: 5%;
+    right: 10%;
 }
 
 .random-img:nth-child(3) {
-    top: 50%;
+    top: 35%;
     left: 5%;
 }
 
 .random-img:nth-child(4) {
-    top: 50%;
+    top: 35%;
     right: 5%;
 }
 
 .random-img:nth-child(5) {
-    bottom: 5%;
-    left: 35%;
+    bottom: 10%;
+    left: 25%;
 }
 
 .random-img:nth-child(6) {
-    bottom: 5%;
-    right: 35%;
+    bottom: 10%;
+    right: 25%;
 }
